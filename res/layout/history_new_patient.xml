@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history_new_patient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.adrianjg.flowmeter.history.NewPatient" >
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/patient_age"
+        android:layout_marginBottom="16dp"
+        android:onClick="goForth"
+        android:text="@string/button_cont" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patient_name"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/patient_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patient_id"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="@string/hint_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/patient_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patient_height"
+        android:layout_below="@+id/patient_name"
+        android:ems="10"
+        android:hint="@string/hint_id"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patient_id"
+        android:layout_below="@+id/patient_id"
+        android:layout_marginTop="36dp"
+        android:text="- - - - -"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/patient_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patient_age"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/hint_height"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/patient_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patient_height"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/hint_age"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/continue_button"
+        android:layout_alignBottom="@+id/continue_button"
+        android:layout_alignLeft="@+id/patient_age"
+        android:text="@string/button_history" />
+
+    <Spinner
+        android:id="@+id/patient_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patient_age"
+        android:layout_alignRight="@+id/patient_age"
+        android:layout_below="@+id/patient_age"
+        android:entries="@array/patient_gender" />
+
+</RelativeLayout>
